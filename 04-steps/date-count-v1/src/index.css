@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-direction: column;  /* 使子div垂直排列 */
+}
+
+.container div {
+  display: flex;
+  justify-content: center;  /* 保持水平居中 */
+  align-items: center;      /* 保持垂直居中 */
+  height: 30px;/* 内部元素的样式 */
+}
