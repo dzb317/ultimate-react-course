@@ -47,6 +47,8 @@ body {
   display: flex;
   gap: 2.4rem;
   justify-content: center;
+
+  
 }
 
 .box {
@@ -54,8 +56,11 @@ body {
   max-width: 42rem;
   background-color: var(--color-background-500);
   border-radius: 0.9rem;
-  overflow: hidden;
   position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .loader {
@@ -138,7 +143,6 @@ body {
 .list {
   list-style: none;
   padding: 0.8rem 0;
-  overflow: hidden;
 }
 
 .list-watched {
@@ -379,3 +383,5 @@ EMPTY STAR
 </svg>
 
 */
+
+
