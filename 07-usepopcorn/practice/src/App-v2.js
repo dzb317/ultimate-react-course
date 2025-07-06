@@ -1,6 +1,5 @@
-import { use, useEffect, useRef, useState } from "react";
+import { use, useEffect, useState } from "react";
 import StarRating from "./StarRating";
-import useLocalStorageState from "./useLocalStorageState";
 
 const tempMovieData = [
   {
@@ -56,7 +55,7 @@ const KEY = "f84fc31d";
 
 export default function App() {
   const [movies, setMovies] = useState([]);
-  const [watched, setWatched] = useLocalStorageState([], "watched");
+  const [watched, setWatched] = useState([]);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [query, setQuery] = useState("");
@@ -376,10 +375,6 @@ function Logo() {
 }
 
 function Search({ query, setQuery }) {
-  const inputEl = useRef(null);
-  useEffect(() => {
-    inputEl.current.focus();
-  }, []);
   return (
     <input
       className="search"
@@ -387,7 +382,6 @@ function Search({ query, setQuery }) {
       placeholder="Search movies..."
       value={query}
       onChange={(e) => setQuery(e.target.value)}
-      ref={inputEl}
     />
   );
 }
