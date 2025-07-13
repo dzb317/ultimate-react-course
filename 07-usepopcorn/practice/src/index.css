@@ -57,6 +57,7 @@ body {
     position: relative;
     overflow-y: auto;
     overflow-x: hidden;
+    scrollbar-width: none;
 }
 
 .loader {
