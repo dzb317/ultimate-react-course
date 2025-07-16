@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useCities } from "../context/CitiesContext";
+import { useCities } from "../contexts/CitiesContext";
 import styles from "./City.module.css";
 import { useEffect } from "react";
 import Spinner from "./Spinner";
@@ -50,8 +50,6 @@ function City() {
                     Check out {cityName} on Wikipedia &rarr;
                 </a>
             </div>
-
-            <div>{/* <ButtonBack /> */}</div>
         </div>
     );
 }
