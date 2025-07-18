@@ -32,31 +32,18 @@ function App() {
             <Main>
                 {status === "loading" && <Loader />}
                 {status === "error" && <Error />}
-                {status === "ready" && <StartScreen dispatch={dispatch} numQuestions={numQuestions} />}
+                {status === "ready" && <StartScreen />}
                 {status === "active" && (
                     <>
-                        <Progress
-                            numQuestions={numQuestions}
-                            index={index}
-                            answer={answer}
-                            points={points}
-                            maxPossiblePoints={maxPossiblePoints}
-                        />
-                        <Question question={questions[index]} dispatch={dispatch} answer={answer} />
+                        <Progress />
+                        <Question />
                         <Footer>
-                            <Timer dispatch={dispatch} secondsRemaining={secondsRemaining} />
-                            <NextButton dispatch={dispatch} answer={answer} numQuestions={numQuestions} index={index} />
-                        </Footer>{" "}
+                            <Timer />
+                            <NextButton />
+                        </Footer>
                     </>
                 )}
-                {status === "finished" && (
-                    <FinishScreen
-                        points={points}
-                        maxPossiblePoints={maxPossiblePoints}
-                        highscore={highscore}
-                        dispatch={dispatch}
-                    />
-                )}
+                {status === "finished" && <FinishScreen />}
             </Main>
         </div>
     );
