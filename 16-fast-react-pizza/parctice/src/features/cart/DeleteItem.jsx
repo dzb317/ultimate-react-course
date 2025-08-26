@@ -4,7 +4,6 @@ import { deleteItem } from "./cartSlice";
 
 function DeleteItem({ pizzaId }) {
     const dispatch = useDispatch();
-    console.log(1)
     return (
         <Button
             type="small"
